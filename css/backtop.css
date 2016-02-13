@@ -6,6 +6,12 @@
 }*/
 /*absolute写法*/
 #back-top{
+  height: 0;
+  text-align: right;
+  overflow: hidden;
+}
+
+#back-top #back-top-icon{
   display: inline;
   position: fixed;
   margin-left: 20px;
