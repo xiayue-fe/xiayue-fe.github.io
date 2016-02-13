@@ -1,9 +1,17 @@
 /*  Back Top Button  */
-#back-top {
+/*#back-top {
   position: fixed;
   bottom: 30px;
   margin-left: 1040px;
+}*/
+/*absolute写法*/
+#back-top{
+  display: inline;
+  position: fixed;
+  margin-right: 20px;
+  bottom: 100px;
 }
+
 #back-top a {
   width: 54px;
   height: 54px;
