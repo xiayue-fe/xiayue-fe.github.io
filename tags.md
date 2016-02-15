@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: *page
 title: "Demos"
 description: "学习代码积累"  
 header-img: "img/semantic.jpg"  
