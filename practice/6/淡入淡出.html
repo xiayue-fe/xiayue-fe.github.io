@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淡入淡出</title>
+	<style type="text/css">
+		img{
+			width: 800px;
+			height: 450px;
+		}
+	</style>
+	<script type="text/javascript" src="../move2.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var img = document.getElementsByTagName("img")[0];
+			img.onmouseover = function(){
+				startMove(img,{opacity:30});
+			}
+			img.onmouseout = function(){
+				startMove(img,{opacity:100});	
+			}
+		}
+	</script>
+</head>
+<body>
+	<img src="1.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>attr-属性控制</title>
+	<style type="text/css">
+		#outer{
+			width: 200px;
+			margin: 0 auto;
+		}
+		#iner{
+			width: 200px;
+			height: 200px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<input type="button" value="attr" id="btn" />
+		<div id="iner" title="attr1"></div>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn = document.getElementById('btn');
+			var iner = document.getElementById("iner");
+			btn.onclick = function(){
+				iner.setAttribute("title","attr");
+				console.log(iner.getAttribute("title"));
+				iner.removeAttribute("title");
+			}
+		}
+	</script>
+</body>
+</html>

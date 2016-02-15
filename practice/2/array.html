@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array方法</title>
+	<link rel="stylesheet" href="../common.css">
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	  var array = [1,2,3,4,5];
+		array.join(',');//1,2,3,4,5
+		array.push(6);//[1,2,3,4,5,6]
+		array.pop();//[1,2,3,4,5]
+		array.unshift(0);//[0,1,2,3,4,5]
+		array.shift();//[1,2,3,4,5]
+		array.sort(function(){
+			//排序方法
+		});
+		array.concat([a,b]);//[1,2,3,4,5,[a,b]]
+		array.slice(1,3);//[2,3]
+		array.splice(2,3);//从index:2开始删除3个元素
+		array.splice(2,0,'a','b');//从index:2插入元素
+		array.splice(2,1,'a','b');//从index:2替换1个元素
+		array.indexOf(1);
+		array.lastIndexOf(1);
+		// ie9+ 方法
+		array.every();//每一项为true返回true
+		array.some();//某一项为true返回true
+		array.filter();//返回经过过滤的数组
+		array.map();//遍历
+		array.forEach();//遍历
+	&lt;/script&gt;
+	</pre>
+
+	<script type="text/javascript">
+		var array = [1,2,3,4,5];
+		array.join(',');//1,2,3,4,5
+		array.push(6);//[1,2,3,4,5,6]
+		array.pop();//[1,2,3,4,5]
+		array.unshift(0);//[0,1,2,3,4,5]
+		array.shift();//[1,2,3,4,5]
+		array.sort(function(){
+			//排序方法
+		});
+		array.concat(['a','b']);//[1,2,3,4,5,[a,b]]
+		array.slice(1,3);//[2,3]
+		array.splice(2,3);//从index:2开始删除3个元素
+		array.splice(2,0,'a','b');//从index:2插入元素
+		array.splice(2,1,'a','b');//从index:2替换1个元素
+		array.indexOf(1);
+		array.lastIndexOf(1);
+		// ie9+ 方法
+		array.every();//每一项为true返回true
+		array.some();//某一项为true返回true
+		array.filter();//返回经过过滤的数组
+		array.map();//遍历
+		array.forEach();//遍历
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分享到</title>
+	<style type="text/css">
+		#div1 {width:100px; height:200px; background:#eee; position:absolute; left:-100px;}
+		#div1 span {width:20px; height:60px; line-height:20px; text-align:center; left:100px; top:70px; background:gray; position:absolute;}
+	</style>
+</head>
+<body>
+	<div id="div1"><span>分享到</span></div>
+	<script type="text/javascript" src="../move2.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div1 = document.getElementById('div1')
+			div1.onmousemove = function(){
+				startMove(div1,{"left":0});
+			}
+			div1.onmouseout = function(){
+				startMove(div1,{"left":-100});
+			}
+		}
+	</script>
+</body>
+</html>

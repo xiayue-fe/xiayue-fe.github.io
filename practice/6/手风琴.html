@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style:  none;}
+		div { width: 660px; height: 254px; border: 1px solid #ccc; margin: 50px auto 0; overflow:hidden; }
+		ul { width: 3300px; height: 254px; }
+		ul li { width: 22px; height: 254px; float: left; position: relative; overflow:hidden; }
+		.active { width: 550px; }
+		ul span { width: 21px; height: 244px; padding-top: 10px; border-right: 1px solid #fff; position: absolute; top: 0; right: 0; color: #fff; font-size: 12px; text-align: center; cursor: pointer; }
+		ul img { width: 550px; height: 254px; }
+		.bg0 { background: #00FFCC; }
+		.bg1 { background: #636363; }
+		.bg2 { background: #3d7fbb; }
+		.bg3 { background: #5ca716; }
+		.bg4 { background: #f28b24; }
+		.bg5 { background: #7c0070; }
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<ul>
+			<li class="active"><span class='bg0'></span><img src="../img/1.jpg" alt=""></li>
+			<li><span class='bg1'></span><img src="../img/2.jpg" alt=""></li>
+			<li><span class='bg2'></span><img src="../img/3.jpg" alt=""></li>
+			<li><span class='bg3'></span><img src="../img/4.jpg" alt=""></li>
+			<li><span class='bg4'></span><img src="../img/5.jpg" alt=""></li>
+			<li><span class='bg5'></span><img src="../img/6.jpg" alt=""></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		
+	function createA(id){
+		var div = document.getElementById(id);
+		var li = div.getElementsByTagName('li');
+		var span = div.getElementsByTagName('span');
+		var minwidth = 99999;
+		var i =0,
+		max = span.length;
+		div.timer = null;
+		for(i=0;i<max;i++){
+			span[i].index = i;
+			span[i].onmouseover = function(){
+				gotoImg(div,this.index,minwidth);
+			}
+			minwidth = Math.min(minwidth,li[i].offsetWidth);
+		}
+	}
+	function gotoImg(div,index,minwidth){
+		if(div.timer){
+			clearInterval(div.timer);
+		}
+		div.timer = setInterval(
+			function(){
+				changeWidth(div,index,minwidth);
+			},30
+		);
+	}
+	function changeWidth(div,index,minwidth){
+		var li = div.getElementsByTagName('li');
+		var span = div.getElementsByTagName('span');
+		var nwidth = div.offsetWidth;
+		var w = 0;
+		var end = true;
+		var i,max= li.length;
+		for(i=0;i<max;i++){
+			if(i==index){
+				continue;
+			}
+			if(minwidth==li[i].offsetWidth){
+				nwidth -= minwidth;
+				continue; 
+			}
+			end = false;
+			speed = Math.ceil((li[i].offsetWidth-minwidth)/10);
+			w = li[i].offsetWidth-speed;
+			if(w<=minwidth){
+				w=  minwidth;
+			}
+			li[i].style.width = w+'px';
+			nwidth -= w;
+		}
+		li[index].style.width = nwidth+'px';
+		if(end){
+			clearInterval(div.timer);
+			div.timer = null;
+		}
+	}
+	window.onload = function(){
+		createA('div1');
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cssText</title>
+</head>
+<body>
+	<p style="background-color: #eee">cssText</p>
+	<p style="background-color: #eee">dom2级样式规范，使用时会覆盖原有样式</p>
+	<button id="btn">btn</button>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn = document.getElementById('btn');
+			btn.onclick = function(){
+				var p = document.getElementsByTagName('p');
+				for(var i=0,m=p.length;i<m;i++){
+					p[i].style.cssText = "background-color:yellow";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

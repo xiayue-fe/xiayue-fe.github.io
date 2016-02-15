@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>瀑布流</title>
+	<style type="text/css">
+		* { padding:0; margin:0; }/*好孩子别用这个*/
+		html { height:100%; }
+		body { height:100%; }
+		img { border:0; }
+		div.wrap { width:100%; margin:0 auto; overflow:hidden; position:relative; background:#DDD; }
+		div.wrap div { width:220px; padding:4px; border:1px solid #000; float:left; }
+		div.wrap div h3 { line-height:35px; }
+		div.wrap div img { width:220px; }
+		div.wrap div p { padding:5px; line-height:20px; }
+		div.wrap div span { color:#F00; }
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			waterFall("wrap")
+		}//尽量避免使用Jquery的ready，safari出现问题很头痛
+		window.onresize = function() {
+			waterFall("wrap")
+		}
+		function waterFall(element,space,children){
+			if(!element) return;
+			children = children || "div";
+			space = space || 20;
+			var wrap = document.getElementById(element);
+			var water = wrap.getElementsByTagName(children);
+			var spaceWidth = water[0].offsetWidth;
+			var wrapWidth = wrap.offsetWidth;
+			var colNum = Math.floor(wrapWidth/spaceWidth);
+			var padding = Math.floor((wrapWidth-colNum*spaceWidth)/(colNum+1));
+			var column = new Array();
+			var length = water.length;
+			var maxHeight = 0;
+			for(var i=0;i<colNum;i++){
+				column[i] = new Array();
+				column[i].top = space;
+				column[i].left = (spaceWidth*i)+padding*(i+1);
+			}
+			for(var i=0;i<length;i++){
+				var index = i+1;
+				if(index%colNum==0){
+					sub = colNum;
+				}else{
+					sub = index%colNum;
+				}
+				_this = water;
+				_this[i].style.position = "absolute";
+				_this[i].style.top = column[sub-1].top+"px";
+				_this[i].style.left = column[sub-1].left+"px";
+				column[sub-1].top += _this[i].offsetHeight + space;
+			}
+			for(var i=0;i<colNum;i++){
+				if(column[i].top>maxHeight){
+					maxHeight = column[i].top;
+				}
+			}
+			wrap.style.height = maxHeight+"px";
+		}
+	</script>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+		<div><img src="1.jpg" alt=""></div>
+		<div><img src="2.jpg" alt=""></div>
+		<div><img src="3.jpg" alt=""></div>
+		<div><img src="4.jpg" alt=""></div>
+	</div>
+</body>
+</html>

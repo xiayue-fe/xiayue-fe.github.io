@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>typeof</title>
+	<link rel="stylesheet" href="../common.css">
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	   function fn(){
+				alert(typeOfObj(1));
+				alert(typeOfObj("string"));
+				alert(typeOfObj([1,2]));
+			}
+
+			fn();
+	&lt;/script&gt;
+	</pre>
+	<script type="text/javascript" src="../common.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			function fn(){
+				alert(typeOfObj(1));
+				alert(typeOfObj("string"));
+				alert(typeOfObj([1,2]));
+			}
+			fn();
+		}
+	</script>
+</body>
+</html>

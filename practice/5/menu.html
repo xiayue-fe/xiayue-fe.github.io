@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右键菜单</title>
+	<style>
+	* {margin:0; padding:0;}
+	#ul1 {width:100px; background:#CCC; border:1px solid black; position:absolute; display:none;list-style: none;}
+	</style>
+
+</head>
+
+<body>
+<ul id="ul1">
+	<li>登陆</li>
+	<li>回到首页</li>
+	<li>注销</li>
+	<li>其他</li>
+</ul>
+<script>
+document.oncontextmenu=function (ev)
+{
+	var oEvent=ev||event;
+	var oUl=document.getElementById('ul1');
+	
+	oUl.style.display='block';
+	oUl.style.left=oEvent.clientX+'px';
+	oUl.style.top=oEvent.clientY+'px';
+	
+	return false;
+};
+
+document.onclick=function ()
+{
+	var oUl=document.getElementById('ul1');
+	oUl.style.display='none';
+};
+</script>
+</body>
+</html>

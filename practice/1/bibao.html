@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+	<link rel="stylesheet" href="../common.css">
+</head>
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	   (function(x,y){
+			alert(Math.max(x,y))
+		})(1,2);
+		函数的嵌套，内层函数能访问外层函数变量，由匿名函数创建。
+		优点：减少全局变量的使用。
+		缺点：使用闭包十分容易造成浏览器的内存泄露，严重情况下会是浏览器挂死。
+		闭包内循环中，循环计数变量为最终值。
+	&lt;/script&gt;
+	</pre>
+	<script type="text/javascript">
+		(function(x,y){
+			alert(Math.max(x,y))
+		})(1,2);
+	</script>
+</body>
+</html>

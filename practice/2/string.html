@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>string方法</title>
+	<link rel="stylesheet" href="../common.css">
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	  var str1 = "abc",
+			str2 = "123";
+		str1.charAt(0);//a
+		str1.concat(str2);//abc123,但str不变
+		str1.slice(0,1);// 返回str1下标从0到1之间的部分
+		str1.substring(0,1);//同slice
+		str1.substr(0,3);//返回str1从0开始的3个字符组成的部分
+		str1.toLowerCase();//小写
+		str1.toUpperCase();//大写
+		str1.indexOf('a');//正向下标
+		str1.lastIndexOf('a');//反向下标
+		str1.match('a');//返回数组[a]
+		str1.search('a');//返回a
+		str1.replace('a','A');//替换
+		str1.split('b');//返回[a,c]
+	&lt;/script&gt;
+	</pre>
+
+	<script type="text/javascript">
+		var str1 = "abc",
+			str2 = "123";
+		str1.charAt(0);//a
+		str1.concat(str2);//abc123,但str不变
+		str1.slice(0,1);// 返回str1下标从0到1之间的部分
+		str1.substring(0,1);//同slice
+		str1.substr(0,3);//返回str1从0开始的3个字符组成的部分
+		str1.toLowerCase();//小写
+		str1.toUpperCase();//大写
+		str1.indexOf('a');//正向下标
+		str1.lastIndexOf('a');//反向下标
+		str1.match('a');//返回数组[a]
+		str1.search('a');//返回a
+		str1.replace('a','A');//替换
+		str1.split('b');//返回[a,c]
+	</script>
+
+</body>
+</html>

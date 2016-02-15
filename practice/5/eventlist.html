@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>事件队列</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+</head>
+<body>
+	<pre>
+		var EventList = function(){
+		  this.List = [];
+		}
+		EventList.prototype = {
+		  processTime : 20,
+		  add : function(fn,context,arrParam){
+		    this.List.push({
+		      fn:fn,context:context,param:arrParam
+		    });
+		  }
+		  start : function(){
+		    var _this = this;
+		    setTimeout(function(){_this.process();},_this.processTime);
+		  }
+		  process : function(){
+		    var ev = this.List.shift();
+		    if(!ev) return ;
+		    ev.fn.apply(ev.context,ev.param);
+		    ev = null;
+		    this.start();
+		  }
+		};
+
+	</pre>
+</body>
+</html>

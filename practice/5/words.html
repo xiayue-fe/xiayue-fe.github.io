@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>words控制输入长度</title>
+</head>
+<body>
+	<input type="text" id='te'/><span>最大长度5个字</span>
+	<script type="text/javascript">
+		window.onload = function(){
+			var text = document.getElementById('te');
+			text.onblur = function(){
+				textCounter(text,5,20)
+			}
+
+		}
+		function textCounter(field, maxlimit, lines) { //参数说明：field是textarea对象,maxlimit是最大允许长度,lines是行数
+		  var arr = field.value.split("\n"); //首先我们要为验证行数，通过分行符“\n”
+		  var perLine = "";
+		  var value = "";
+		  if (arr.length < lines) lines = arr.length; //判断行数是否超出了我们规定的行数，如果超了就把行数改为超出的，因为我们要算字符串长度
+		  for (loop = 0; loop < lines; loop++) { //循环测数字符串总长度，不多说了
+		    perLine = arr[loop];
+		    if (perLine.length > maxlimit)
+		      perLine = perLine.substring(0, maxlimit);
+		    value = value + perLine;
+		    if (loop != lines - 1)
+		      value = value + "\n";
+		  }
+		  if (field.value != value)
+		    field.value = value;
+		  if (checkstr(value, maxlimit)) { //判断字符串长度是不是超标
+		    field.value = value.substring(0, maxlimit); //删除超除的多余字符串
+		  }
+		}
+		//判断中文和英文，字符串的长度是否超标
+		function checkstr(str, digit) { 
+		  var n = 0;
+		  for (i = 0; i < str.length; i++) {
+		    var leg = str.charCodeAt(i); //ASCII码
+		    if (leg > 255) { //大于255的都是中文
+		      n += 2; //如果是中文就是2个字节
+		    } else {
+		      n += 1; //英文，不多说了
+		    }
+		  }
+		  if (n > digit) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+		}
+	</script>
+</body>
+</html>

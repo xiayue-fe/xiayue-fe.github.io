@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments</title>
+	<link rel="stylesheet" href="../common.css">
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	   function fn(x){
+				alert(
+					'fn.length 函数定义时参数数量：'+fn.length);
+				alert(
+					'arguments.length 实际参数：'+arguments.length);
+				alert(
+					'arguments.callee()为函数自身,通常用于递归。'
+					);
+			}
+			fn(1,2)
+	&lt;/script&gt;
+	</pre>
+	<script type="text/javascript">
+		window.onload = function(){
+			function fn(x){
+				alert(
+					'fn.length 函数定义时参数数量：'+fn.length);
+				alert(
+					'arguments.length 实际参数：'+arguments.length);
+				alert(
+					'arguments.callee()为函数自身,通常用于递归。'
+					);
+			}
+
+			fn(1,2);
+		}
+	</script>
+</body>
+</html>

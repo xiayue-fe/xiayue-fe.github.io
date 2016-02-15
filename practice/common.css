@@ -1,0 +1,10 @@
+
+
+/*代码部分样式*/
+pre{color:green;padding:10px 15px;background:#f0f0f0;border:1px dotted #333;font:12px/1.5 Courier New;}
+pre span{color:#999;}
+
+
+/*清除浮动*/
+.clearfix:after{content:'';display:table;clear: both;}
+.clearfix{*zoom:1;}
