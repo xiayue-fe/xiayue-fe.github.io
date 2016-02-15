@@ -14,8 +14,10 @@
 <body>
 	<div id="div1" style="color: red">js样式获得方式：1 style行间样式。2 非行间样式</div>
 	<button id="btn1">行间</button><button id="btn2">非行间</button>
-	<script type="text/javascript" src="../common.js"></script>
 	<script type="text/javascript">
+		function getStyle(obj,name){
+			return obj.currentStyle ? obj.currentStyle[name] : getComputedStyle(obj,false)[name];
+		}
 		window.onload = function(){
 			var btn1 = document.getElementById("btn1"),
 				btn2 = document.getElementById('btn2');

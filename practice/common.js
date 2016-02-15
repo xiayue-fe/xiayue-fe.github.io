@@ -216,17 +216,17 @@ $ = function (val) {
 
 
 // ajax与函数返回值
-function ajax_return(){
-  var d = "";
-  $.ajax({
-    ......,//参数省略
-    async:false//同步时此函数的return 会等待ajax返回数据后再返回函数返回值 
-    success:function(data){
-      d = data;
-    }
-  });
-  return d;
-}
+// function ajax_return(){
+//   var d = "";
+//   $.ajax({
+//     // ......,//参数省略
+//     async:false//同步时此函数的return 会等待ajax返回数据后再返回函数返回值 
+//     success:function(data){
+//       d = data;
+//     }
+//   });
+//   return d;
+// }
 
 // 对Date的扩展，将 Date 转化为指定格式的String
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
@@ -259,11 +259,11 @@ function randomNumber(lower,upper){
 // 随机颜色值
 // http://www.yyjcw.com/html/News/643.html
 function randomColor(){
-  return  ’#’ +  
+  return  '#' +  
   (function(color){  
-    return (color +=  ’0123456789abcdef’[Math.floor(Math.random()*16)])  
+    return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])  
       && (color.length == 6) ?  color : arguments.callee(color);  
-  })(’’);  
+  })('');  
 }
 // 随机背景图
 // var bgs = [];
