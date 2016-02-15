@@ -1,6 +1,6 @@
 ---
 layout: 123
-title: "Demos"
+<!-- title: "Demos" -->
 description: "学习代码积累"  
 header-img: "img/semantic.jpg"  
 ---
