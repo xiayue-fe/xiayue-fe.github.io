@@ -5,7 +5,7 @@ description: "学习代码积累"
 header-img: "img/semantic.jpg"  
 ---
 
-<link rel="stylesheet" href="/practice/list.css">  
+<link rel="stylesheet" href="../xiayue-fe.github.io/practice/list.css">  
 
 <div class="wrap shadow">
     <ol id="ol" class="list">
@@ -13,4 +13,4 @@ header-img: "img/semantic.jpg"
     </ol>
 </div>
 
-<script type="text/javascript" src="/practice/list.js"></script> 
+<script type="text/javascript" src="../xiayue-fe.github.io/practice/list.js"></script> 
