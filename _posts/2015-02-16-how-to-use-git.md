@@ -63,3 +63,35 @@ description:
 	    build/
 	    # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 	    doc/*.txt
+
+查看未暂存内容的变化：
+
+	git diff
+
+查看暂存内容与上次快照的差异：
+
+	git diff --cached
+
+提交更新：
+
+	git commit -m '提交说明'
+
+移除文件：
+
+	git rm filename
+
+移动文件(重命名)：
+
+	git mv oldname newname
+
+
+#### 2.3查看提交历史
+
+	git log
+
+#### 2.4撤销操作
+
+	
+
+
+
