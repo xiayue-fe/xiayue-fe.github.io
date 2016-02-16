@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>绝对定位整页布局</title>
+<style>
+    body { font-family: 'microsoft yahei'; margin: 0;padding:0;}
+    .page{position:absolute;left:0;top:0;right:0;bottom:0;}
+    html,body{height:100%;text-align: center;}
+    .header,.footer{position:absolute;left:0;right:0;}
+    .header{height:50px;top:0;background-color: #98f682;}
+    .footer{height:50px;bottom:0;background-color: #f682ab;}
+    .aside{
+        width:250px;
+        position:absolute;left:0;top:50px;bottom:50px;
+        background-color: #8d9dec;
+    }
+    .content{
+        position:absolute;top:50px;bottom:50px;right: 0;
+        left:250px;
+        overflow:hidden;
+        background-color: #ddec8d;
+    }
+    .overlay{
+        position:absolute;
+        left:0;top:0;right:0;bottom:0;
+        background-color:rgba(0,0,0,.5);
+        z-index:9;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+<div class="page">
+    <div class="header">
+        顶部
+    </div>
+    <div class="aside">侧边栏</div>
+    <div class="content">
+            内容区域                
+            <input type="button" id="btn" value="点击全屏覆盖" />
+    </div>
+    <div class="footer">我是底部</div>
+    
+</div>
+<div id="mask" class="overlay">
+    
+</div>
+<script type="text/javascript">
+    window.onload =function(){
+        var btn = document.getElementById("btn");
+        var mask = document.getElementById("mask");
+        btn.onclick = function(){
+            mask.style.display = 'block';
+        }
+        mask.onclick = function(e){
+            mask.style.display = 'none';    
+        }
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float布局</title>
+	<style>
+		body { font-size: 14px; background-color: #DDF3F7; color: #333; }
+		a { color: #0082CB; text-decoration: none; }
+		p { margin: 0; } img { border: 0; }
+
+		.mib_body { width: 600px; margin-left: auto; margin-right: auto; }
+		.mib_x { margin-bottom: 10px; background-color: #fff; }
+		.mib_list { padding: 20px; }
+		.mib_resize { overflow: auto; resize: both; }
+		.mib_head_a { float: left; margin-right: 20px; }
+		/* 下面这个是固定布局写法 */
+		.mib_cell { display: table-cell; *display: inline-block; width: 2000px; *width: auto; }
+
+		.mib_sms { line-height: 22px; padding-bottom: 6px; font-size: 14px; }
+		.mib_select { width: 80px; padding: 5px; font-size: 100%; }
+	</style>
+</head>
+<body>
+	<div id="mibBody" class="mib_body">
+    <div class="mib_x mib_resize">
+        <div class="mib_list">
+            <a href="http://t.sina.com.cn/xuruoxuan" class="mib_head_a">
+                <img id="mibHeadImg" title="" src="../img/head.png" style="width: 50px;height: 50px;" />
+            </a>
+            <div class="mib_cell">
+                <p class="mib_sms"><a title="fe" href="#">fe</a>：樱花我静静地观赏着，那一树晕红的花蕾，淡红的花瓣，粉红的花蕊，如一天的云锦，如盛装的新娘，又如一群正随着春天的旋律在舞台上跳芭蕾的纯情少女。一阵轻轻的春风吹过，那樱花的花瓣如飞扬的雪片儿，纷纷扬扬的撒落在赏花人肩上、头上，一会儿树间的草地上落满了一层花瓣。</p>
+                <div class="feed_img"><img src="../img/1.jpg" height="120"></div>
+            </div>    
+        </div>
+    </div>
+</div>
+</body>
+</html>
