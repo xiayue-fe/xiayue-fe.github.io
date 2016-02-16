@@ -91,6 +91,52 @@ description:
 
 #### 2.4撤销操作  
 
+修改最后一次提交：
+
+	git commit --amend
+
+此命令将使用当前暂存区提交
+
+取消暂存：
+
+	git reset HEAD filename
+
+取消对文件的修改：
+
+	git checkout -- filename
+
+#### 2.5远程仓库的使用
+
+查看当前的远程库：
+	
+	git remote 
+	git remote -v 显示克隆地址
+
+添加远程仓库：
+
+	git remote add [shortname] url
+
+从现有仓库抓取数据：
+
+	git fetch [remote-name]
+
+推送数据到远程仓库：
+
+	git push [remote-name] [branch-name]
+
+查看远程仓库信息：
+
+	git remote show [remote-name]
+
+远程仓库的删除和重命名：
+
+	git remote rename name1 name2
+	git remote rm name
+
+#### 2.6打标签
+
+	git tag
+
 
 
 
