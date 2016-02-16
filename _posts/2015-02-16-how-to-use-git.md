@@ -144,40 +144,71 @@ description:
 某个提交对象往回看的历史
 
 #### 3.2新建与合并
-	新建分支：
+新建分支：
+
 	git branch name 
-	切换分支：
+
+切换分支：
+
 	git checkout name 
-	新建并切换到分支
+
+新建并切换到分支：
+
 	git checkout -b name  
-	在切换分支前，注意要将未提交的内容提交，保持一个清洁的工作区。
-	合并分支：
+
+在切换分支前，注意要将未提交的内容提交，保持一个清洁的工作区。
+
+合并分支：
+
 	git merge name 
-	删除分支：
+
+删除分支：
+
 	git branch -d name 
 
 
 #### 3.3分支的管理
+
 列出所有分支：
+	
 	git branch 
+
 查看各个分支最后一个提交对象的信息：
+	
 	git branch -v 
+
 查看已经与当前分支合并的分支：
+	
 	git branch -merged 
+
 查看尚未与当前分支合并的分支：
+	
 	git branch -no-merrged 
 
 
 #### 3.5远程分支
+
 推送本地分支：
+	
 	git push (远程仓库名) (分支名)
+
 跟踪远程分支：
+	
 	git checkout -b [分支名] [远程名]/[分支名] 
+
 删除远程分支：	
+	
 	git push [远程名] :[分支名]
 
 #### 3.6分支的衍合
-git rebase 分支名  
-git rebase --noto 分支1 分支2
+
+基础衍合：
+	
+	git rebase 分支名  
+
+重新指定基地分支的衍合：
+	
+	git rebase --noto 分支1 分支2
+
 衍合的风险
 一旦分支的提交对象发布到公共仓库，就千万不要再对该分支进行衍合操作。
