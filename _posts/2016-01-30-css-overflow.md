@@ -21,21 +21,21 @@ overflow-x和overflow-y（ie8+）
 
 ### 兼容性
 
-a.不同浏览器样式不同。
+1.不同浏览器样式不同。
 
-b.宽度设定机制
+2.宽度设定机制
 
 ie7滚动条问题，原因是设置了width：100%。
 
 ### 作用的前提
 
-a.非 display:inline
+1.非 display:inline
 
-b.对应方位的尺寸限制：width/height/max-width.max-height/absolute拉伸
+2.对应方位的尺寸限制：width/height/max-width.max-height/absolute拉伸
 
 ie7滚动条问题
 
-c.td元素上overflow起作用，还需要为table设置table-layout:fixed
+3.td元素上overflow起作用，还需要为table设置table-layout:fixed
 
 ### 妙用
 
@@ -63,7 +63,7 @@ ie8+ 默认 ：html{ overflow : auto; }
 
 ### body/html与滚动条-js与滚动高度
 
-var st = document.documentElement.scrollTop || document.body.scroll;
+	var st = document.documentElement.scrollTop || document.body.scroll;
 
 ### overflow的padding-bottom缺失现象
 
@@ -106,7 +106,7 @@ BFC，内部元素不会影响外部元素。
 
 overflow除去visible以外的属性都可以触发BFC。
 
-常见应用：
+### 常见应用：
 
 清除浮动影响。
 
@@ -115,29 +115,40 @@ overflow除去visible以外的属性都可以触发BFC。
 解决办法：边框/padding/自身BFC化/overflow 都可以。
 
 两栏自适应布局。
-通过overflow:hidden 是其BFC化，不受浮动元素影响。完全独立。
+通过overflow:hidden 使其BFC化，不受浮动元素影响。完全独立。
 
 推荐方式：
+	.left{float:left;margin-right:20px;}
 
+流体自适应布局与BFC自适应布局是不同的。
 
 
 ### 两栏自适应布局
 
-.cell {
-        displau:table-cell;width:2000px; //ie8+ BFC特性
-       *display:inline-block;*widht:auto; //ie7- 伪BFC特性
-}
+	.cell {
+	        displau:table-cell;width:2000px; //ie8+ BFC特性
+	       *display:inline-block;*widht:auto; //ie7- 伪BFC特性
+	}
  
 ## overflow与绝对定位-隐藏失效与滚动固定
 
 失效原因：
+绝对定位元素不总是被父级overflow属性剪裁，尤其当overflow在绝对定位元素及其包含块之间的时候。
+
+包含块：
+含postiion:relative/absolute/fixed声明的父级元素，没有则body元素。
+
 避免失效：
-overflow元素自身为包含块
-子元素为包含块
-overflow子元素transform声明当作包含块
+
+1.overflow元素自身为包含块
+
+2.子元素为包含块
+
+3.overflow子元素transform声明当作包含块
+
 
 妙用：
-
+绝对定位+空格实现fixed效果。
 
 ## 依赖overflow的样式表现
 
@@ -152,8 +163,8 @@ text-overflow:ellipsis
 
 url#hot  锚链
 
-<div id="hot"> 锚点
-<a href="#hot"/>
+	<div id="hot"> 锚点
+	<a href="#hot"/>
 
 ### 条件：
 
