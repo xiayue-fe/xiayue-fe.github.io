@@ -138,6 +138,36 @@ description:
 	git tag
 
 
+### 3.git分支   
+
+#### 3.1分支
+某个提交对象往回看的历史
+
+#### 3.2新建与合并
+
+	git branch name 新建分支
+	git checkout name 切换分支
+	git checkout -b name  新建并切换到分支
+	在切换分支前，注意要将未提交的内容提交，保持一个清洁的工作区。
+	git merge name 合并分支
+	git branch -d name 删除分支
 
 
+#### 3.3分支的管理
+	git branch 列出所有分支
+	git branch -v 查看各个分支最后一个提交对象的信息
+	git branch -merged 查看已经与当前分支合并的分支
+	git branch -no-merrged 查看尚未与当前分支合并的分支
 
+
+#### 3.5远程分支
+	git push origin name 推送本地分支
+	git checkout -b name origin/name 新建本地分支name 并且和origin上的name分支内容相同。 
+	跟踪远程分支
+	git push origin:name 删除远程分支
+
+#### 3.6分支的衍合
+	git rebase 分支名  
+	git rebase --noto 分支1 分支2
+	衍合的风险
+	一旦分支的提交对象发布到公共仓库，就千万不要再对该分支进行衍合操作。
