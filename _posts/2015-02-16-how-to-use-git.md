@@ -28,25 +28,16 @@ description:
 
 #### 2.1取得git仓库    
 
-初始化新仓库：
+    git init 初始化新仓库
 
-    git init
-
-
-从现有仓库克隆：
-
-	git clone [url] yourname
+	git clone [url] yourname 从现有仓库克隆
 
 
 #### 2.2记录每次更新到仓库
-
-检查文件状态：
 	
-	git status
-
-跟踪新文件：
+	git status 检查文件状态
 	
-	git add filename
+	git add filename 跟踪新文件
 
 ’git add‘ 命令也可用于将修改过的文件放入暂存区等。
 
