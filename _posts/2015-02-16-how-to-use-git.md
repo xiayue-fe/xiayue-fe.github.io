@@ -48,7 +48,7 @@ description:
 	
 	git add filename
 
-'git add' 命令也可用于将修改过的文件放入暂存区等。
+’git add‘ 命令也可用于将修改过的文件放入暂存区等。
 
 
 
