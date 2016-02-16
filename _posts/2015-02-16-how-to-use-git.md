@@ -11,15 +11,22 @@ description:
 
 ###1.1设置用户名和邮箱
 
->git config --global user.name 'name'
->
->git config --global user.email 'email'
+    git config --global user.name 'name'
+
+    git config --global user.email 'email'
 
 ###1.2查看配置
 
->git config --list
+    git config --list
 
 ###1.3获取帮助
 
->git help
+    git help
+
+
+##2.git基础
+
+###2.1取得git仓库
+
+
 
