@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>overflow与锚点定位选项卡技术</title>
+	<style type="text/css">
+		.box,.link{
+			margin: 0 auto;
+		}
+		.box{
+			width: 450px;
+			height: 350px;
+			overflow: hidden;
+		}
+		.list{
+			width: 450px;
+			height: 350px;
+			text-align: center;
+			line-height: 350px;
+			font-size: 75px;
+		}
+		#one{background-color: #6a9ac7 ;}
+		#two{background-color: #71c76a;}
+		#three{background-color: #d08d26;}
+		#four{background-color: #d06b26;}
+
+		.link{
+			width: 450px;
+			height: 50px;
+			text-align: center;
+			padding: 15px;
+		}
+		.click{
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			display: inline-block;
+			border: 1px solid black;
+			text-align: center;
+			background-color: #ededed;
+			cursor: pointer;
+			text-decoration: none;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="box">
+		<div class="list" id="one">1</div>
+		<div class="list" id="two">2</div>
+		<div class="list" id="three">3</div>
+		<div class="list" id="four">4</div>
+	</div>	
+	<div class="link">
+		<a class="click" href="#one">1</a>
+		<a class="click" href="#two">2</a>
+		<a class="click" href="#three">3</a>
+		<a class="click" href="#four">4</a>
+	</div>
+
+</body>
+</html>

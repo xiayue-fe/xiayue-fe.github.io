@@ -152,8 +152,9 @@ overflow除去visible以外的属性都可以触发BFC。
 
 ## 依赖overflow的样式表现
 
-resize
+resize拉伸属性
 
+文字引出...省略号表示
 text-overflow:ellipsis
 
 
@@ -190,7 +191,7 @@ overflow选项卡技术：
 
 不足：会穿透到最外层的滚动条
 
-应用：单屏
+应用：单页应用
 
 
 
