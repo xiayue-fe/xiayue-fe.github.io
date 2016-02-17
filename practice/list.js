@@ -44,7 +44,17 @@
                 { url : '../xiayue-fe.github.io/practice/6/手风琴.html', title : '手风琴' },
                 { url : '../xiayue-fe.github.io/practice/6/淡入淡出.html', title : '淡入淡出' },
                 { url : '../xiayue-fe.github.io/practice/6/无缝滚动.html', title : '无缝滚动' }
+            ],
+            [
+                { title : 'css深入理解'},
+                { url : '../xiayue-fe.github.io/practice/css-think/float.html', title : 'float-自适应2端布局' },
+                { url : '../xiayue-fe.github.io/practice/css-think/absolute.html', title : 'absolute-图表跟随、居中边缘对齐' },
+                { url : '../xiayue-fe.github.io/practice/css-think/absolute.html', title : 'absolute-自适应布局(适合移动端)' },
+                { url : '../xiayue-fe.github.io/practice/css-think/overflow.html', title : 'overflow-锚点tab切换' },
+                { url : '../xiayue-fe.github.io/practice/css-think/lineheight.html', title : 'lineheight-图片/多行文本垂直居中' },
+                { url : '../xiayue-fe.github.io/practice/css-think/vertical-align.html', title : 'verticalalign-图片/多行文本垂直居中' }
             ]
+
         ];
     for(var i = 0; i < data.length; i++){
         var items = data[i];
