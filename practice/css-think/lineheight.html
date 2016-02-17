@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>line-height</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+	<style type="text/css">
+		.box{
+			background-color: #eee;
+			line-height: 400px;
+			display: inline-block;
+			width: 550px;
+			text-align: center;
+		}
+		.box > img{
+			vertical-align: middle;
+		}
+
+		.box > .text{
+			display: inline-block;
+			line-height: normal;
+			text-align: left;
+			vertical-align: middle;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<p class="box">
+		<img src="../img/2.jpg" alt="">
+	</p>
+
+	<p class="box">
+		<span class="text">
+			多行文字<br>
+			垂直居中<br>
+			对齐
+		</span>
+	</p>
+	<pre>
+		.box{
+			background-color: #eee;
+			line-height: 400px;
+			display: inline-block;
+			width: 550px;
+			text-align: center;
+		}
+		.box > img{
+			vertical-align: middle;
+		}
+
+		.box > .text{
+			display: inline-block;
+			line-height: normal;
+			text-align: left;
+			vertical-align: middle;
+			max-width: 100%;
+		}
+	</pre>
+</body>
+</html>
