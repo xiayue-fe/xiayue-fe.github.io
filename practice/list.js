@@ -43,7 +43,8 @@
                 { url : '../xiayue-fe.github.io/practice/6/分享到.html', title : '分享到' },
                 { url : '../xiayue-fe.github.io/practice/6/手风琴.html', title : '手风琴' },
                 { url : '../xiayue-fe.github.io/practice/6/淡入淡出.html', title : '淡入淡出' },
-                { url : '../xiayue-fe.github.io/practice/6/无缝滚动.html', title : '无缝滚动' }
+                { url : '../xiayue-fe.github.io/practice/6/无缝滚动.html', title : '无缝滚动' },
+                { url : '../xiayue-fe.github.io/practice/5/nav.html', title : '导航' }
             ],
             [
                 { title : 'css深入理解'},
@@ -53,6 +54,10 @@
                 { url : '../xiayue-fe.github.io/practice/css-think/overflow.html', title : '锚点tab切换' },
                 { url : '../xiayue-fe.github.io/practice/css-think/lineheight.html', title : '图片/多行文本垂直居中' },
                 { url : '../xiayue-fe.github.io/practice/css-think/vertical-align.html', title : '图片/多行文本垂直居中2' }
+            ],
+            [
+                {title:'模仿名站'},
+                {url:'../xiayue-fe.github.io/practice/mofang/baidu.html',title:'百度首页'}
             ]
 
         ];
