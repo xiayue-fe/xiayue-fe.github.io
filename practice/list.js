@@ -57,7 +57,8 @@
             ],
             [
                 {title:'模仿名站'},
-                {url:'../xiayue-fe.github.io/practice/mofang/baidu.html',title:'百度首页'}
+                {url:'../xiayue-fe.github.io/practice/mofang/baidu/baidu.html',title:'百度首页'}
+                {url:'../xiayue-fe.github.io/practice/mofang/youku/youku.html',title:'优酷首页'}
             ]
 
         ];
