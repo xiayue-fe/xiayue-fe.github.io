@@ -22,7 +22,7 @@ Hi,我是xiayue，欢迎光临我的博客！
 
 
 
-### 自学练习作品
+### 练习作品
 
 - [练习列表](http://xiayue-fe.github.io/demos/)
 
@@ -41,24 +41,18 @@ Hi,我是xiayue，欢迎光临我的博客！
 - 喜欢接触新事物，有一定的自学能力
 
 
-### 简历
+### 简历相关
 
 -[在线简历](http://xiayue.deercv.com/?preview=1)
 -[pdf版下载](http://xiayue-fe.github.io/jianli/web前端-黄浩-2年.pdf)
 
 
 
-###联系
+### 联系方式
 
-- [博客：www.cnfeat.com](www.cnfeat.com)
-
-- [微博@CnFeat](http://weibo.com/207775270)
-
-- [知乎@陈素封](http://www.zhihu.com/people/Feat)
-
-- [知乎专栏](http://zhuanlan.zhihu.com/cnfeat)
-
-- 公众号：cnfeat
+- 手机：15510915110
+- Email：xiayue_fe@163.com 
+- QQ：978922769
 
 
 
