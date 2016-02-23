@@ -45,7 +45,7 @@ Hi,我是xiayue，欢迎光临我的博客！
 
 - [在线简历](http://xiayue.deercv.com/?preview=1)
 - [pdf版下载](http://xiayue-fe.github.io/jianli/web前端-黄浩-2年.pdf)
-
+- ![](http://xiayue-fe.github.io/jianli/2code.png)
 
 
 ##联系方式
