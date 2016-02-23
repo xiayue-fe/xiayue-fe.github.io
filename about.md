@@ -8,10 +8,10 @@ header-img: "img/green.jpg"
 
 
 
-Hi,我是xiayue，欢迎光临我的博客！
+#### Hi,我是xiayue，欢迎光临我的博客！
 
 
-### 自我定位
+#### 自我定位
 
 
 - 我原本是一名java程序员
@@ -22,12 +22,12 @@ Hi,我是xiayue，欢迎光临我的博客！
 
 
 
-### 练习作品
+#### 练习作品
 
 - [练习列表](http://xiayue-fe.github.io/demos/)
 
 
-### 相关技能
+#### 相关技能
 
 - 熟练掌握语义化的 HTML 和具有兼容性的 CSS 模式，熟练手写符合 W3C 标准的结构和代码
 - 熟练掌握 jQuery，实现日常需要的交互效果
@@ -41,15 +41,14 @@ Hi,我是xiayue，欢迎光临我的博客！
 - 喜欢接触新事物，有一定的自学能力
 
 
-### 简历相关
+#### 简历相关
 
--[在线简历](http://xiayue.deercv.com/?preview=1)
-
--[pdf版下载](http://xiayue-fe.github.io/jianli/web前端-黄浩-2年.pdf)
-
+- [在线简历](http://xiayue.deercv.com/?preview=1)
+- [pdf版下载](http://xiayue-fe.github.io/jianli/web前端-黄浩-2年.pdf)
 
 
-### 联系方式
+
+#### 联系方式
 
 - 手机：15510915110
 - Email：xiayue_fe@163.com 
