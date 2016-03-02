@@ -56,6 +56,11 @@
                 { url : '../xiayue-fe.github.io/practice/css-think/vertical-align.html', title : '图片/多行文本垂直居中2' }
             ],
             [
+                {title:'html5'},
+                {url:'../xiayue-fe.github.io/practice/7/tooptip.html',title:'tooptip效果'},
+                {url:'../xiayue-fe.github.io/practice/7/loading.html',title:'loading'}
+            ],
+            [
                 {title:'模仿名站'},
                 {url:'../xiayue-fe.github.io/practice/mofang/baidu/baidu.html',title:'百度首页'},
                 {url:'../xiayue-fe.github.io/practice/mofang/youku/youku.html',title:'优酷首页'}
