@@ -44,7 +44,8 @@
                 { url : '../xiayue-fe.github.io/practice/6/手风琴.html', title : '手风琴' },
                 { url : '../xiayue-fe.github.io/practice/6/淡入淡出.html', title : '淡入淡出' },
                 { url : '../xiayue-fe.github.io/practice/6/无缝滚动.html', title : '无缝滚动' },
-                { url : '../xiayue-fe.github.io/practice/5/nav.html', title : '导航' }
+                { url : '../xiayue-fe.github.io/practice/5/nav.html', title : '导航' },
+                { url : '../xiayue-fe.github.io/practice/7/t.html', title : '自动轮播' }
             ],
             [
                 { title : 'css深入理解'},
@@ -57,7 +58,7 @@
             ],
             [
                 {title:'html5'},
-                {url:'../xiayue-fe.github.io/practice/7/tooltip.html',title:'tooltip效果'},
+                {url:'../xiayue-fe.github.io/practice/7/tooltip.html',title:'css3文字提示效果'},
                 {url:'../xiayue-fe.github.io/practice/7/loading.html',title:'loading'}
             ],
             [
