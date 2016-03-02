@@ -57,7 +57,7 @@
             ],
             [
                 {title:'html5'},
-                {url:'../xiayue-fe.github.io/practice/7/tooptip.html',title:'tooptip效果'},
+                {url:'../xiayue-fe.github.io/practice/7/tooltip.html',title:'tooltip效果'},
                 {url:'../xiayue-fe.github.io/practice/7/loading.html',title:'loading'}
             ],
             [
